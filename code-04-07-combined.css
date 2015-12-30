@@ -1,0 +1,5 @@
+@import "code-4-5-styles.css";
+span {
+	border: medium black dashed;
+	padding: 10px;
+}
