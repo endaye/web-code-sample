@@ -29,7 +29,7 @@ http.createServer( function (req, res) {
 		} else {
 			console.log("[405] " + req.method + " to " + req.url);
 			res.writeHead(405, "Method not supported", {'Content-Type': 'text/html'});
-			res.end('<html><head><title>404 - Not found</title></head><body>' + 
+			res.end('<html><head><title>405 - Method not supported</title></head><body>' + 
 				'<h1>Method not supported</h1></body></html>');
 		}
 		break;
