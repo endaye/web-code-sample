@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-13-10</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<base href="http://localhost:8080"/>
+</head>
+<body>
+	<form id="voteform" method="post" action="/form">
+		<p>
+			<label for="name">
+				Name: <input value="Adam" id="name" name="name"/>
+			</label>
+		</p>
+		<p>
+			<label for="password">
+				Password: <input type="password" placeholder="Min 6 characters" maxlength="20" size="20" id="password" name="password"/>
+			</label>
+		</p>
+		<p>
+			<fieldset>
+				<legend>Vote for your favorite fruit</legend>
+				<label for="apples">
+					<input type="radio" checked value="Apples" id="apples" name="fave"/>
+				</label>
+				<label for="oranges">
+					<input type="radio" value="Oranges" id="oranges" name="fave"/>
+				</label>
+				<label for="cherries">
+					<input type="radio" value="Cherries" id="cherries" name="fave"/>
+				</label>
+			</fieldset>
+		</p>
+		<input type="submit" value="Submit Vote"/>
+	</form>
+</body>
+</html>
