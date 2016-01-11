@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-18-11</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style type="text/css">
+		:invalid {
+			outline: medium solid red;
+		}
+		:valid {
+			outline: medium solid green;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="http://localhost:8080/form">
+		<p>
+			<label for="name">Name: 
+				<input required id="name" name="name"/>
+			</label>
+		</p>
+		<p>
+			<label for="name">City:
+				<input required id="city" name="city"/>
+			</label>
+		</p>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
