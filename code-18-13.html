@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-18-13</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		:required {
+			outline: medium solid green;
+		}
+		:optional {
+			outlime: medium solid red;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="http://localhost:8080/form">
+		<p>
+			<label for="price1">
+				$ per unit in your area:
+				<input type="number" min="0" max="100" required
+				value="1" id="price1" name="price1"/>
+			</label>
+			<label for="price2">
+				$ per unit in your area:
+				<input type="number" min="0" max="100"
+				value="1" id="price2" name="price2"/>
+			</label>
+		</p>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
