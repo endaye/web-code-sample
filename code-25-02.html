@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-25-2</title>
+</head>
+<body>
+	<p id="paratext">
+		There are over 500 varieties of banana alone. By the time we add the countless types of apples, bananas, oranges, and other well-known fruit, we are faced with thousands of choices. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.	
+		<img src="banana.jpg" alt="banana">
+	</p>
+	<script>
+		var images;
+		if (document.querySelectorAll) {
+			images = document.querySelectorAll("#paratext > img");
+		} else {
+			images = document.getElementById("paratext").getElementByTagName("img");
+		}
+
+		for (var i = 0; i < images.length; i++) {
+			images[i].style.border = "thick solid black";
+			images[i].style.padding = "4px";
+		}
+	</script>
+</body>
+</html>
+
