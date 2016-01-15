@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-26-6</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body>
+	<p id="cookiedata">
+	
+	</p>
+	<button id="write">Add Cookie</button>
+	<button id="update">Update Cookie</button>
+	<script>
+		var cookieCount = 0;
+		document.getElementById("update").onclick = updateCookie;
+		document.getElementById("write").onclick = createCookie;
+		readCookies();
+
+		function readCookies() {
+			document.getElementById("cookiedata").innerHTML = document.cookie;
+		}
+
+		function createCookie() {
+			cookieCount++;
+			document.cookie = "Cookie_" + cookieCount + "=Value_" + cookieCount;
+			readCookies();
+		}
+
+		function updateCookie() {
+			document.cookie = "Cookie_" + cookieCount + "=Updated_" + cookieCount;
+			readCookies();
+		}
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-26-5</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body>
+	<button id="pressme">Press Me</button>
+	<script>
+		document.getElementById("pressme").onclick = function() {
+			// 跳转页面
+			document.location.assign("http://baidu.com");
+			// 跳转并删除历史记录（无法后退）
+			//document.location.replace("http://baidu.com");
+		}
+	</script>
+</body>
+</html>
+

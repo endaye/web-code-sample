@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-26-7</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<script>
+		document.onreadystatechange = function() {
+			if (document.readState == "interactive") {
+				document.getElementById("pressme").onclick = function() {
+					document.getElementById("results").innerHTML = "Button Pressed";
+				}
+			}
+		};
+	</script>
+</head>
+<body>
+	<button id="pressme">Press Me</button>
+	<pre id="results"></pre>
+</body>
+</html>
+

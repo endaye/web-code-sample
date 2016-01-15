@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-26-9</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body>
+	<script>
+		var features = ["Core", "HTML", "CSS", "Selecttors-API"];
+		var levels = ["1.0", "2.0", "3.0"];
+
+		document.writeln("<pre>");
+		for (var i = 0; i < features.length; i++) {
+			document.writeln("Checking for feature: " + features[i]);
+			for (var j = 0; j < levels.length; j++) {
+				document.writeln(features[i] + " Level " + levels[j] + ":");
+				document.writeln(document.implementation.hasFeature(features[i], levels[j]));
+			}
+		}
+		document.writeln("</pre>");
+	</script>
+</body>
+</html>
+
