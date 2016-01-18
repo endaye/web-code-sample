@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-26-11</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		pre {
+			border: medium double black;
+		}
+	</style>
+</head>
+<body>
+	<pre id="results"></pre>
+	<img id="lemon" class="fruits" name="apple" src="lemon.jpg" alt="lemon"/>
+	<p>
+		There are over 500 varieties of banana alone. By the time we add the countless types of apples, bananas, oranges, and other well-known fruit, we are faced with thousands of choices. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. 
+	</p>
+	<img id="apple" class="fruits images" name="apple" src="apple.jpg" alt="apple"/>
+	<p>
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<img id="banana" src="banana.jpg" alt="banana"/>
+	<script>
+		var resultsElement = document.getElementById("results");
+
+		var pElems = document.getElementsByTagName("p");
+		resultsElement.innerHTML += "There are " + pElems.length + " p elements\n";
+
+		var fruitsElems = document.getElementsByClassName("fruits");
+		resultsElement.innerHTML += "There are " + fruitsElems.length + " elements in the fruits class\n";
+
+		var nameElems = document.getElementsByName("apple");
+		resultsElement.innerHTML += "There are " + nameElems.length + " elements with the name 'apple'";
+	</script>
+</body>
+</html>
+

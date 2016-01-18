@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-26-10</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		pre {
+			border: medium double black;
+		}
+	</style>
+</head>
+<body>
+	<pre id="results"></pre>
+	<img id="lemon" name="image" src="lemon.jpg" alt="lemon"/>
+	<p>
+		There are over 500 varieties of banana alone. By the time we add the countless types of apples, bananas, oranges, and other well-known fruit, we are faced with thousands of choices. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. 
+	</p>
+	<img id="apple" name="image" src="apple.jpg" alt="apple"/>
+	<p>
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<img id="banana" name="image" src="banana.jpg" alt="banana"/>
+	<script>
+		var resultsElement = document.getElementById("results");
+		var elems = document["apple"];
+
+		if (elems.namedItem) {
+			for (var i = 0; i < elems.length; i++) {
+				resultsElement.innerHTML += "Image Element: " + elems[i].id + "\n";
+			} 
+		} else {
+			resultsElement.innerHTML += "Scr for element is: " + elems.src + "\n"
+		}
+	</script>
+</body>
+</html>
+
