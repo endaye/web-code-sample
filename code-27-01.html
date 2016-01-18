@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-27-1</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body id="body">
+	<table>
+		<tr><th>outerWidth:</th><td id="owidth"></td></tr>
+		<tr><th>outerHeight:</th><td id="oheight"></td></tr>
+	</table>
+
+	<script>
+		document.getElementById("owidth").innerHTML = window.outerWidth;
+		document.getElementById("oheight").innerHTML = document.defaultView.outerHeight;
+	</script>
+</body>
+</html>
+

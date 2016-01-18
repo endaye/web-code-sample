@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-27-3</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body id="body">
+	<p>
+		<button id="scroll">Scroll</button>
+		<button id="print">Print</button>
+		<button id="close">Close</button>
+	</p>
+	<p>
+		There are over 500 varieties of banana alone. By the time we add the countless types of apples, bananas, oranges, and other well-known fruit, we are faced with thousands of choices. 
+		<img src="apple.jpg" alt="apple"/>
+		By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of <span id="apple">apples</span>, <span id="orange">oranges</span>, and other well-known fruit, we are faced with thousands of choices.
+
+		<img src="banana.jpg" alt="small banana"/>
+		By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. There are lots of different kinds of fruits - there are over 500 varieties of banana alone.
+	</p>
+	<script>
+		var buttons = document.getElementsByTagName("button");
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].onclick = handleButtonPress;
+		}
+
+		function handleButtonPress(e) {
+			if (e.target.id == "print") {
+				window.print();
+			} else if (e.target.id == "close") {
+				window.close();
+			} else {
+				window.scrollTo(0, 400);
+			}
+		}
+	</script>
+</p>
+</body>
+</html>
+
