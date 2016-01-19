@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-27-5</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body id="body">
+	<button id="back">Back</button>
+	<button id="forward">Forward</button>
+	<button id="go">Go</button>
+	<script>
+		var buttons = document.getElementsByTagName("button");
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].onclick = handleButtonPress;
+		}
+
+		function handleButtonPress(e) {
+			if (e.target.id == "back") {
+				window.history.back();
+			} else if (e.target.id == "forword") {
+				window.history.forword();
+			} else if (e.target.id == "go") {
+				window.history.go("http://www.baidu.com");
+			}
+		}
+	</script>
+</body>
+</html>
+

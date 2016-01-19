@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-27-4</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body id="body">
+	<p>
+		<button id="alert">Alert</button>
+		<button id="confirm">Confirm</button>
+		<button id="prompt">Prompt</button>
+		<button id="modal">Modal Dialog</button>
+	</p>
+	<script>
+		var buttons = document.getElementsByTagName("button");
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].onclick = handleButtonPress;
+		}
+
+		function handleButtonPress(e) {
+			if (e.target.id == "alert") {
+				window.alert("This is an alert");
+			} else if (e.target.id == "confirm") {
+				var confirmed = window.confirm("This is a confirm - do you want to proceed?");
+				alert("Confirmed? " + confirmed);
+			} else if (e.target.id == "prompt") {
+				var response = window.prompt("Enter a word,", "hello");
+				alert("The word was " + response);
+			} else if (e.target.id == "modal") {
+				window.showModalDialog("http://baidu.com");
+			}
+		}
+	</script>
+</body>
+</html>
+
