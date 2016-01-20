@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-28-3</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		p {
+			border: medium double black;
+		}
+		p.newclass {
+			background-color: gray;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<p id="textblock" class="fruit numbers">
+		There are over 500 varieties of banana alone. By the time we add the countless types of apples, bananas, oranges, and other well-known fruit, we are faced with thousands of choices. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<pre id="results"></pre>
+	<button id="toggle">Toggle Class</button>
+	<script>
+		var results = document.getElementById("results");
+		document.getElementById("toggle").onclick = toggleClass;
+
+		listClasses();
+		function listClasses() {
+			var classList = document.getElementById("textblock").classList;
+			results.innerHTML = "Current classes: ";
+			for (var i = 0; i < classList.length; i++) {
+				results.innerHTML += classList[i] + " ";
+			}
+		}
+
+		function toggleClass() {
+			document.getElementById("textblock").classList.toggle("newclass");
+			listClasses();
+		}
+	</script>
+</body>
+</html>
+
