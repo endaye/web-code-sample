@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-27-9: Otherpage</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+</head>
+<body>
+	<p></p>
+	<h1>Other Page</h1>
+	<p id="msg"></p>
+	<script type="text/javascript">
+		var sel = "No selection made";
+		if (window.location.search == "?banana") {
+			sel = "Selection: Banana";
+		} else if (window.location.search == "?apple") {
+			sel = "Selection: Apple";
+		}
+		document.getElementById("msg").innerHTML = sel;
+	</script>
+</body>
+</html>
+
