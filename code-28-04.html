@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-28-4</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		p {
+			border: medium double black;
+		}
+	</style>
+</head>
+<body>
+	<p id="textblock" class="fruit numbers">
+		There are over 500 varieties of banana alone. By the time we add the countless types of apples, bananas, oranges, and other well-known fruit, we are faced with thousands of choices. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices. There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<pre id="results"></pre>
+	<script>
+		var results = document.getElementById("results");
+		var elem = document.getElementById("textblock");
+
+		results.innerHTML = "Element has lang attribute: " + elem.hasAttribute("lang") + "\n";
+		results.innerHTML += "Adding lang abbribute\n";
+		elem.setAttribute("lang", "en-US");
+		results.innerHTML += "Attr value is : " + elem.getAttribute("lang") + "\n";
+		results.innerHTML += "Set new value for lang attribute\n";
+		elem.setAttribute("lang", "en-UK");
+		results.innerHTML += "Value is now: " + elem.getAttribute("lang") + "\n";
+	</script>
+</body>
+</html>
+
