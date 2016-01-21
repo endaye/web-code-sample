@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-28-15</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		table {
+			border: solid thin black;
+			border-collapse: collapse;
+			margin: 2px 0px;
+			float: left;
+		}
+		td {
+			padding: 4px 5px;
+		}
+		p {
+			clear: left;
+		}
+	</style>
+</head>
+<body>
+	<table border="1">
+		<thead><tr><th>Fruit</th><th>Color</th></tr></thead>
+		<tbody>
+			<tr id="applerow"><td>Apple</td><td>Red</td></tr>
+		</tbody>
+	</table>
+	<textarea id="results" rows="3"></textarea>
+	<p>
+		<button id="inner">Inner HTML</button>
+		<button id="outer">Outter HTML</button>
+	</p>
+	<script>
+		var results = document.getElementById("results");
+		var row = document.getElementById("applerow");
+
+		document.getElementById("inner").onclick = function() {
+			results.innerHTML = row.innerHTML;
+		};
+
+		document.getElementById("outer").onclick = function() {
+			results.innerHTML = row.outerHTML;
+		};
+	</script>
+</body>
+</html>
+
