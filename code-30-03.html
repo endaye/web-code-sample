@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-30-3</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style type="text/css">
+		p {
+			background: gray;
+			color: white;
+			padding: 10px;
+			margin: 5px;
+			border: thin solid black;
+		}
+	</style>
+	<script>
+		function handleMouseOver(elem) {
+			elem.style.background='white';
+			elem.style.color='blue';
+		}
+		function handleMouseOut(elem) {
+			elem.style.removeProperty('color');
+			elem.style.removeProperty('background');
+		}
+	</script>
+</head>
+<body>
+	<p onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)">
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+
+	<p onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)">
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+</body>
+</html>
+

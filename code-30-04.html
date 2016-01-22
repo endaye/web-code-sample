@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-30-4</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style type="text/css">
+		p {
+			background: gray;
+			color: white;
+			padding: 10px;
+			margin: 5px;
+			border: thin solid black;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<p>
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<script>
+		var pElems = document.getElementsByTagName("p");
+
+		for (var i = 0; i < pElems.length; i++) {
+			pElems[i].onmouseover = handleMouseOver;
+			pElems[i].onmouseout = handleMouseOut;
+		}
+		function handleMouseOver(e) {
+			e.target.style.background='white';
+			e.target.style.color='blue';
+		}
+		function handleMouseOut(e) {
+			e.target.style.removeProperty('color');
+			e.target.style.removeProperty('background');
+		}
+	</script>
+</body>
+</html>
+
