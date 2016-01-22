@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-29-1</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		p {
+			border: medium double black;
+			background-color: lightgray;
+		}
+		#block1 {
+			color: white;
+		}
+		table {
+			border: thin solid black;
+			border-collapse: collapse;
+			margin: 5px;
+			float: left;
+		}
+		td {
+			padding: 2px;
+		}
+	</style>
+	<link rel="stylesheet" href="code-07-13-styles.css" type="text/css"/>
+	<style media="screen AND (min-width:500px)" type="text/css">
+		#block2 {
+			color: yellow;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<p id="block1">There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+
+	<p id="block2">
+		There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<div id="placeholder"/>
+	<script>
+		var placeholder = document.getElementById("placeholder");
+		var sheets = document.styleSheets;
+
+		for (var i = 0; i < sheets.length; i++) {
+			var newElem = document.createElement("table");
+			newElem.setAttribute("border", "1");
+			addRow(newElem, "Index", i);
+			addRow(newElem, "href", sheets[i].href);
+			addRow(newElem, "title", sheets[i].title);
+			addRow(newElem, "type", sheets[i].type);
+			addRow(newElem, "ownerNode", sheets[i].ownerNode.tagName);
+			placeholder.appendChild(newElem);
+		}
+
+		function addRow(elem, header, value) {
+			elem.innerHTML += "<tr><td>" + header + ":</td><td>" + value + "</td></tr>";
+		}
+	</script>
+</body>
+</html>
+

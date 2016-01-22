@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-29-3</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		p {
+			border: medium double black;
+			background-color: lightgray;
+		}
+		#block1 {
+			color: white;
+			border: thick black solid;
+			background-color: gray;
+		}
+	</style>
+	<link rel="stylesheet" href="code-07-13-styles.css" type="text/css"/>
+	<style media="screen AND (min-width:500px), PRINT" type="text/css">
+		#block2 {
+			color: yellow;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<p id="block1">There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.
+	</p>
+	<div><button id="pressme">Press Me</button></div>
+	<script>
+		document.getElementById("pressme").onclick = function() {
+			document.styleSheets[0].disabled = !document.styleSheets[0].disabled;
+		}
+	</script>
+</body>
+</html>
+
