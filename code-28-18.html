@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-28-18</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style>
+		table {
+			border: solid thin black;
+			border-collapse: collapse;
+			margin: 10px;
+			float: left;
+		}
+		td {
+			padding: 4px 5px;
+		}
+		p {
+			clear: left;
+		}
+	</style>
+</head>
+<body>
+	<p id="textblock">There are lots of different kinds of fruits - there are over 500 varieties of banana alone. By the time we add the countless types of apples, oranges, and other well-known fruit, we are faced with thousands of choices.</p>
+
+	<p>
+		<button id="insert">Insert</button>
+	</p>
+
+	<script>
+		document.getElementById("insert").onclick = function() {
+			var textBlock = document.getElementById("textblock");
+			textBlock.firstChild.splitText(10);
+			var newText = textBlock.childNodes[1].splitText(4).previousSibling;
+			textBlock.insertBefore(document.createElement("b"), newText).appendChild(newText);
+		};
+	</script>
+</body>
+</html>
+
