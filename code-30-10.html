@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-30-10</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style type="text/css">
+		a {
+			background: gray;
+			color: white;
+			padding: 10px;
+			border: thin solid black;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<a href="http://baidu.com">Visit Baidu</a>
+		<a href="http://w3c.org">Visit W3C</a>
+	</p>
+	<script>
+		function handleClick(e) {
+			if (!confirm("Do you want to navigation to " + e.target.href + " ?")) {
+				e.preventDefault();
+			}
+		}
+
+		var elems = document.querySelectorAll("a");
+		for (var i = 0; i < elems.length; i++) {
+			elems[i].addEventListener("click", handleClick, false);
+		}
+	</script>
+</body>
+</html>
+

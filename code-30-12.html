@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-30-12</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Adam Freeman"/>
+	<meta name="description" content="A simple example"/>
+	<link rel="shortcut icon" href="idea.ico" type="image/x-icon"/>
+	<style type="text/css">
+		p {
+			background: gray;
+			color: white;
+			padding: 10px;
+			margin: 5px;
+			border: thin solid black;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p>
+			<label for="fave">Fruit: <input autofocus id="fave" name="fave"/></label>
+		</p>
+		<p>
+			<label for="name">Name: <input id="name" name="name"/></label>
+		</p>
+		<button type="submit">Submit Vote</button>
+		<button type="reset">Reset</button>
+	</form>
+	<script>
+		var inputElems = document.getElementsByTagName("input");
+		for (var i = 0; i < inputElems.length; i++) {
+			inputElems[i].onfocus = handleFocusEvent;
+			inputElems[i].onblur = handleFocusEvent;
+		}
+
+		function handleFocusEvent(e) {
+			if (e.type == "focus") {
+				e.target.style.backgroundColor = "lightgray";
+				e.target.style.border = "thick double red";
+			} else {
+				e.target.style.removeProperty("backgroundColor");
+				e.target.style.removeProperty("border");
+			}
+		}
+	</script>
+</body>
+</html>
+

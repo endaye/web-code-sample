@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Code-30-8</title>
+	<title>Code-30-9</title>
 	<meta charset="utf-8"/>
 	<meta name="author" content="Adam Freeman"/>
 	<meta name="description" content="A simple example"/>
@@ -34,6 +34,16 @@
 		banana.addEventListener("mouseout", handleMouseEvent);
 		textblock.addEventListener("mouseover", handleDescendantEvent, true);
 		textblock.addEventListener("mouseout", handleDescendantEvent, true);
+		textblock.addEventListener("mouseover", handleBubbleMouseEvent, false);
+		textblock.addEventListener("mouseout", handleBubbleMouseEvent, false);
+
+		function handleBubbleMouseEvent(e) {
+			if (e.type == "mouseover" && e.eventPhase == Event.BUBBLING_PHASE) {
+				e.target.style.textTransform = "uppercase";
+			} else if (e.type == "mouseout" && e.eventPhase == Event.BUBBLING_PHASE) {
+				e.target.style.textTransform = "none";
+			}
+		}
 
 		function handleDescendantEvent(e) {
 			if (e.type == "mouseover" && e.eventPhase == Event.CAPTURING_PHASE) {
@@ -43,7 +53,6 @@
 				e.target.style.removeProperty('border');
 				e.currentTarget.style.removeProperty('border');
 			}
-			e.stopPropagation();
 		}
 
 		function handleMouseEvent(e) {
