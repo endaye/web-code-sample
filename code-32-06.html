@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-32-6</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div>
+		<button>Apples</button>
+		<button>Cherries</button>
+		<button>Bananas</button>
+	</div>
+	<div id="target">Press a button</div>
+	<script>
+		var buttons = document.getElementsByTagName("button");
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].onclick = handleButtonPress;
+		}
+
+		var httpRequest;
+
+		function handleButtonPress(e) {
+			httpRequest = new XMLHttpRequest();
+			httpRequest.onreadystatechange = handleResponse;
+			httpRequest.open("GET", e.target.innerHTML + ".html");
+			httpRequest.setRequestHeader("X-HTTP-Method-Override", "DELETE");
+			httpRequest.send();
+		}
+
+		function handleError(e) {
+			displayErrorMsg("Error event", httpRequest.status + httpRequest.statusText);
+		}
+
+		function handleResponse() {
+			if (httpRequest.readystate == 4 && httpRequest.status == 200) {
+				document.getElementById("target").innerHTML = httpRequest.responseText;
+			}
+		}
+		
+	</script>
+</body>
+</html>
+
