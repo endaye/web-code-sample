@@ -1,6 +1,6 @@
 var http = require('http');
 var querystring = require('querystring');
-var multipart = require('multipart');
+// var multipart = require('multipart');
 
 function writeResponse(res, data) {
 	var total = 0;
@@ -45,23 +45,24 @@ http.createServer(function (req, res) {
 					dataObj = JSON.parse(fullBody);
 					writeResponse(res, dataObj);
 				});
-			} else if (contentType.indexOf("multipart/form-data") > -1) {
-				var partName;
-				var partType;
-				var parser = new multipart.parser();
-				parser.boundary = "--" + req.headers["content-type"].substring(30);
-				parser.onpartbegin = function(part) {
-					partName = part.name;
-					partType = part.contentType;
-				};
-				parser.ondata = function(data) {
-					if (partName != "file") {
-						dataObj[partName] = data;
-					}
-				};
-				req.on('data', function(chunk) { parser.write(chunk);});
-				req.on('end', function() {writeResponse(res, dataObj);});
-			}
+			} 
+			// else if (contentType.indexOf("multipart/form-data") > -1) {
+			// 	var partName;
+			// 	var partType;
+			// 	var parser = new multipart.parser();
+			// 	parser.boundary = "--" + req.headers["content-type"].substring(30);
+			// 	parser.onpartbegin = function(part) {
+			// 		partName = part.name;
+			// 		partType = part.contentType;
+			// 	};
+			// 	parser.ondata = function(data) {
+			// 		if (partName != "file") {
+			// 			dataObj[partName] = data;
+			// 		}
+			// 	};
+			// 	req.on('data', function(chunk) { parser.write(chunk);});
+			// 	req.on('end', function() {writeResponse(res, dataObj);});
+			// }
 		}
 	}
 }).listen(8080);
