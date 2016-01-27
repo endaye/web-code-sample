@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-35-17</title>
+	<style>
+		canvas {
+			border: thin solid black;
+			margin: 4px;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="140">
+		Your browser doesn't support the <code>canvas</code> element
+	</canvas>
+	<img id="banana" hidden src="banana-small.jpg" alt="banana"/>
+	<script type="text/javascript">
+		var ctx = document.getElementById("canvas").getContext("2d");
+		var imageElement = document.getElementById("banana");
+		ctx.drawImage(imageElement, 10, 10);
+		ctx.drawImage(imageElement, 120, 10, 100, 120);
+		ctx.drawImage(imageElement, 20, 20, 100, 50, 350, 10, 100, 120);
+	</script>
+</body>
+</html>
