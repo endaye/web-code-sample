@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-33-1</title>
+	<meta charset="utf-8"/>
+	<style>
+		.table {
+			display: table;
+		}
+		.row {
+			display: table-row;
+		}
+		.cell {
+			display: table:cell; 
+			padding: 5px;
+		}
+		.label {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<form action="http:127.0.0.1:8080/form" id="fruitform" method="post">
+		<div class="row">
+			<div class="row">Bananas:</div>
+			<div class="cell"><input type="text" name="bananas" value="2"/></div>
+		</div>
+		<div class="row">
+			<div class="cell label">Apples:</div>
+			<div class="cell"><input type="text" name="apples" value="5"/></div>
+		</div>
+		<div class="row">
+			<div class="cell label">Cherries:</div>
+			<div class="cell"><input type="text" name="cherries" value="20"/></div>
+		</div>
+		<div class="row">
+			<div class="cell label">Total:</div>
+			<div id="results" class="cell">0 items</div>
+		</div>
+		<button id="submit" type="submit">Submit Form</button>
+	</form>
+</body>
+</html>
+
