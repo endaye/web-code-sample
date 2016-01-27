@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code-35-18</title>
+	<style>
+		canvas {
+			border: thin solid black;
+		}
+		body > * {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<video id="vid" src="sample.webm" controls preload="auto" width="360" height="200">
+		Video cannot be displayed
+	</video>
+	<div>
+		<button id="pressme">Snapshot</button>
+	</div>
+	<canvas id="canvas" width="360" height="200">
+		Your browser doesn't support the <code>canvas</code> element
+	</canvas>
+	<script>
+		var ctx = document.getElementById("canvas").getContext("2d");
+		var imageElement = document.getElementById("vid");
+
+		document.getElementById("pressme").onclick = function(e) {
+			ctx.drawImage(imageElement, 0, 0, 360, 200);
+		}
+	</script>
+</body>
+</html>
